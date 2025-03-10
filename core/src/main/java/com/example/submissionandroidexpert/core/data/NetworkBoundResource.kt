@@ -1,7 +1,5 @@
 package com.example.submissionandroidexpert.core.data
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MediatorLiveData
 import com.example.submissionandroidexpert.core.data.source.remote.network.ApiResponse
 import com.example.submissionandroidexpert.core.utils.AppExecutors
 import kotlinx.coroutines.flow.Flow
@@ -27,7 +25,7 @@ abstract class NetworkBoundResource<ResultType, RequestType>(private val mExecut
                 }
                 is ApiResponse.Error -> {
                     onFetchFailed()
-                    emit(Resource.Error<ResultType>(apiResponse.errorMessage))
+                    emit(Resource.Error(apiResponse.errorMessage))
                 }
             }
         } else {

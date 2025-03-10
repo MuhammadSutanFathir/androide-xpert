@@ -1,7 +1,5 @@
 package com.example.submissionandroidexpert.core.data
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.map
 import com.example.submissionandroidexpert.core.data.source.local.LocalDataSource
 import com.example.submissionandroidexpert.core.data.source.remote.RemoteDataSource
 import com.example.submissionandroidexpert.core.data.source.remote.network.ApiResponse
@@ -23,7 +21,7 @@ class TeamRepository(
         object : NetworkBoundResource<List<Team>, List<TeamsItem>>(appExecutors) {
             override fun loadFromDB(): Flow<List<Team>> {
                 return localDataSource.getAllTeam().map {
-                    com.example.submissionandroidexpert.core.utils.DataMapper.mapEntitiesToDomain(it)
+                    DataMapper.mapEntitiesToDomain(it)
                 }
             }
 
@@ -34,25 +32,25 @@ class TeamRepository(
                 remoteDataSource.getAllTeam()
 
             override suspend fun saveCallResult(data: List<TeamsItem>) {
-                val teamList = com.example.submissionandroidexpert.core.utils.DataMapper.mapResponsesToEntities(data)
+                val teamList = DataMapper.mapResponsesToEntities(data)
                 localDataSource.insertTeam(teamList)
             }
         }.asFlow()
 
     override fun getFavoriteTeam(): Flow<List<Team>> {
         return localDataSource.getFavoriteTeam().map {
-            com.example.submissionandroidexpert.core.utils.DataMapper.mapEntitiesToDomain(it)
+            DataMapper.mapEntitiesToDomain(it)
         }
     }
 
     override fun setFavoriteTeam(team: Team, state: Boolean) {
-        val teamEntity = com.example.submissionandroidexpert.core.utils.DataMapper.mapDomainToEntity(team)
+        val teamEntity = DataMapper.mapDomainToEntity(team)
         appExecutors.diskIO().execute { localDataSource.setFavoriteTeam(teamEntity, state) }
     }
 
     override fun searchTeamByName(query: String): Flow<List<Team>> {
         return localDataSource.searchTeamByName(query).map {
-            com.example.submissionandroidexpert.core.utils.DataMapper.mapEntitiesToDomain(it)
+            DataMapper.mapEntitiesToDomain(it)
         }
     }
 }

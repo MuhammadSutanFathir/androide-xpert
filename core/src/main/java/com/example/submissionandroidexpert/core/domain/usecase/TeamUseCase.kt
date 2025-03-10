@@ -1,6 +1,5 @@
 package com.example.submissionandroidexpert.core.domain.usecase
 
-import androidx.lifecycle.LiveData
 import com.example.submissionandroidexpert.core.data.Resource
 import com.example.submissionandroidexpert.core.domain.model.Team
 import kotlinx.coroutines.flow.Flow

@@ -1,7 +1,6 @@
 package com.example.submissionandroidexpert.core.data.source.remote.network
 
 import com.example.submissionandroidexpert.core.data.source.remote.response.TeamResponse
-import retrofit2.Call
 import retrofit2.http.GET
 
 interface ApiService {

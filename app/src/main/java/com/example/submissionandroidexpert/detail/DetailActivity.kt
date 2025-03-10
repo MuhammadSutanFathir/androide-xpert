@@ -1,12 +1,8 @@
 package com.example.submissionandroidexpert.detail
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.IntentCompat.getParcelableExtra
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.ViewModelProvider
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.example.submissionandroidexpert.R

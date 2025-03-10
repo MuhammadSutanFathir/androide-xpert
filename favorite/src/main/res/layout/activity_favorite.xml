@@ -4,10 +4,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FavoriteFragment">
+    tools:context=".FavoriteActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_tourism"
+        android:id="@+id/rv_team"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/item_team"

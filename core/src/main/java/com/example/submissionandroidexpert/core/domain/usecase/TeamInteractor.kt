@@ -1,6 +1,5 @@
 package com.example.submissionandroidexpert.core.domain.usecase
 
-import androidx.lifecycle.LiveData
 import com.example.submissionandroidexpert.core.domain.model.Team
 import com.example.submissionandroidexpert.core.domain.repository.ITeamRepository
 
