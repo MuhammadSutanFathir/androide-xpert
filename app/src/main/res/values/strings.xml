@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">SubmissionAndroidExpert</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="image_team">Image</string>
+    <string name="team_name">Name</string>
+    <string name="team_location">Location</string>
+    <string name="back">Back</string>
+    <string name="stadium">Stadium</string>
+    <string name="description">Description</string>
+    <string name="no_data_favorite">There is no favorite team</string>
+    <string name="no_data_search">Team not found</string>
+    <string name="search">Search...</string>
+    <string name="team_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="something_wrong">Something wrong, i can feel it</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_favorite">Favorite</string>
+</resources>
